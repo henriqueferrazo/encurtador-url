@@ -1,8 +1,7 @@
 package controller;
 
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import model.Url;
+import org.springframework.web.bind.annotation.*;
 
 @RestController
 @RequestMapping
@@ -10,6 +9,9 @@ public class UrlController {
     @GetMapping
     public String getByUrl(long id){return "";}
 
+    @PostMapping
+    public String createURL(@PathVariable Url url){
 
+    }
 }
 
