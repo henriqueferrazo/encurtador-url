@@ -1,4 +1,4 @@
-package urlRepository;
+package repository;
 
 import model.Url;
 import org.springframework.data.jpa.repository.JpaRepository;

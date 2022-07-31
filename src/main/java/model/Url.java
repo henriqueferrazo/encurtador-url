@@ -9,6 +9,7 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Table;
+import java.io.Serializable;
 
 @Data
 @Builder
@@ -16,13 +17,15 @@ import javax.persistence.Table;
 @AllArgsConstructor
 @Entity
 @Table(name = "url")
-public class Url {
+public class Url implements Serializable {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    private long id;
+    private Integer id;
 
     private String original_url;
 
     private String short_url;
+
+
 
 }
