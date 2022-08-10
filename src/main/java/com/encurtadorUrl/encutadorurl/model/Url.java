@@ -1,4 +1,4 @@
-package model;
+package com.encurtadorUrl.encutadorurl.model;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;
@@ -23,9 +23,6 @@ public class Url implements Serializable {
     private Integer id;
 
     private String original_url;
-
-    private String short_url;
-
 
 
 }

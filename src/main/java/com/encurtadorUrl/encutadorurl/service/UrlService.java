@@ -1,10 +1,11 @@
-package service;
+package com.encurtadorUrl.encutadorurl.service;
 
+import DTO.UrlDTO;
 import lombok.RequiredArgsConstructor;
 import model.IDConverter;
-import model.Url;
+import com.encurtadorUrl.encutadorurl.model.Url;
 import org.springframework.stereotype.Service;
-import repository.UrlRepository;
+import com.encurtadorUrl.encutadorurl.repository.UrlRepository;
 
 import java.util.Optional;
 
@@ -13,7 +14,6 @@ import java.util.Optional;
 public class UrlService {
 
     private final UrlRepository urlRepository;
-    private final IDConverter converter = IDConverter.getInstance();
 
     public Url saveUrl(Url url) {
         return urlRepository.save(url);
@@ -23,11 +23,5 @@ public class UrlService {
         return obj.orElse(null);
     }
 
-    public Url insert(Url obj) {
-        obj.setId(null);
-        obj = urlRepository.save(obj);
-        obj.setShort_url(converter.toBase62(String.valueOf(obj.getId())));
-        return urlRepository.save(obj);
-    }
 
 }

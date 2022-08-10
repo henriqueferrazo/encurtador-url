@@ -1,6 +1,6 @@
-package repository;
+package com.encurtadorUrl.encutadorurl.repository;
 
-import model.Url;
+import com.encurtadorUrl.encutadorurl.model.Url;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 import java.util.Optional;
